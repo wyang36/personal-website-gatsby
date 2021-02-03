@@ -8,22 +8,22 @@ export const MENUS = [
     },
     {
         label: 'About Me',
-        link: 'about-me',
+        link: '/about-me',
         icon: faUser
     },
     {
         label: 'Projects',
-        link: 'projects',
+        link: '/projects',
         icon: faPalette
     },
     {
         label: 'Blog',
-        link: 'blog',
+        link: '/blog',
         icon: faBlog
     },
     {
         label: 'Contact Me',
-        link: 'contact',
+        link: '/contact',
         icon: faPaperPlane
     }
 ]

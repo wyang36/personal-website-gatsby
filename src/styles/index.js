@@ -1,5 +1,3 @@
-import winter from './winter'
+import winter from './winter';
 
-export {
-    winter
-}
+export { winter };
