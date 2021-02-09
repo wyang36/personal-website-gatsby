@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Layout from '../components/layout';
+import AboutMe from '../components/aboutme';
 
 // styles
 const pageStyles = {
@@ -9,7 +10,9 @@ const pageStyles = {
 const AboutMePage = ({ location }) => {
   return (
     <main style={pageStyles}>
-      <Layout location={location}></Layout>
+      <Layout location={location}>
+        <AboutMe />
+      </Layout>
     </main>
   );
 };

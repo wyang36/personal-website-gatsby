@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFeatherAlt, faBars } from '@fortawesome/free-solid-svg-icons';
 import { MENUS } from '../utils/data';
@@ -26,9 +26,13 @@ const styles = {
   },
 };
 
-const Navbar = ({ theme, location }) => {
+const Navbar = ({ theme, location, onSetMobileMenu }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const breakpoints = useBreakpoint();
+
+  useEffect(() => {
+    onSetMobileMenu(isMobileMenuOpen);
+  }, [isMobileMenuOpen]);
 
   return (
     <header style={styles.topbar}>
@@ -42,9 +46,9 @@ const Navbar = ({ theme, location }) => {
           <FontAwesomeIcon icon={faFeatherAlt} size="lg" />
         )}
       </div>
-      {breakpoints.s ? (
+      {breakpoints.s || breakpoints.s === undefined ? (
         isMobileMenuOpen ? (
-          <LeftMenu theme={theme} />
+          <LeftMenu theme={theme} location={location} />
         ) : null
       ) : (
         <div style={styles.topbarRight}>

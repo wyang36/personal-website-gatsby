@@ -1,26 +1,33 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link } from 'gatsby';
 import { MENUS } from '../utils/data';
-import Item from './navbarItem';
+import Item from './navbarItemLeft';
+import Slide from 'react-reveal/Slide';
 
 const styles = {
   leftMenu: {
-    width: '200px',
+    width: '100vw',
     height: 'calc(100vh - 50px)',
     position: 'fixed',
     top: 50,
     paddingLeft: 16,
+    paddingTop: 16,
   },
 };
 
-const NavbarLeft = ({ theme }) => {
+const NavbarLeft = ({ theme, location }) => {
   return (
-    <div style={styles.leftMenu}>
-      {MENUS.map((item) => (
-        <Item key={item.link} theme={theme} {...item} />
-      ))}
-    </div>
+    <Slide left ssrFadeout>
+      <div
+        style={{
+          ...styles.leftMenu,
+          backgroundImage: `linear-gradient(to bottom right, ${theme.colorTheme0}, ${theme.colorTheme1})`,
+        }}
+      >
+        {MENUS.map((item) => (
+          <Item key={item.link} theme={theme} {...item} active={location.pathname === item.link} />
+        ))}
+      </div>
+    </Slide>
   );
 };
 

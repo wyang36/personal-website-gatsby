@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, cloneElement } from 'react';
 import favicon from '../images/favicon.ico';
 import Helmet from 'react-helmet';
 import * as themes from '../styles';
@@ -7,12 +7,13 @@ import Navbar from './navbar';
 
 export default function Layout({ children, location }) {
   const [theme, setTheme] = useState(themes[getSeasonByMonth()]);
-  const { colorTheme0, colorTheme1, colorContent1 } = theme;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { colorTheme0, colorTheme1, colorContent0 } = theme;
   const styles = {
     width: '100vw',
     height: '100vh',
     backgroundImage: `linear-gradient(to bottom right, ${colorTheme0}, ${colorTheme1})`,
-    color: colorContent1,
+    color: colorContent0,
   };
   return (
     <div style={styles}>
@@ -26,8 +27,12 @@ export default function Layout({ children, location }) {
           padding: 0px;
         }
       `}</style>
-      <Navbar theme={theme} location={location} />
-      {children}
+      <Navbar
+        theme={theme}
+        location={location}
+        onSetMobileMenu={(value) => setIsMobileMenuOpen(value)}
+      />
+      {cloneElement(children, { theme: theme, isMobileMenuOpen: isMobileMenuOpen })}
     </div>
   );
 }
