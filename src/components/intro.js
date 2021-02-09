@@ -13,6 +13,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    height: '100vh',
   },
   h1: {
     fontSize: '2rem',
@@ -31,7 +32,7 @@ const Intro = ({ theme, isMobileMenuOpen }) => {
             Hi! I'm <span style={{ color: theme.colorContent1 }}>Kira</span>.
           </h1>
           <h2 style={styles.h2}>
-            I'm a full-stack <span style={{ color: theme.colorContent1 }}>software engineer</span>{' '}
+            I'm a full-stack <span style={{ color: theme.colorContent2 }}>software engineer</span>{' '}
             and amateur rock climber based in Los Angeles CA.
           </h2>
         </div>

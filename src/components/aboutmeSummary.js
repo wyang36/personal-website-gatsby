@@ -18,7 +18,7 @@ const styles = {
   paragraphDiv: {
     margin: '10px',
     lineHeight: '20px',
-    maxWidth: '60vw',
+    maxWidth: '1000px',
   },
 };
 

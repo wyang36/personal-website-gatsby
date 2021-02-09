@@ -5,6 +5,7 @@ export default {
   colorBrand3: '#dae1e7',
   colorContent0: '#dae1e7',
   colorContent1: '#00909e',
+  colorContent2: '#c1a57b',
   colorTheme0: '#142850',
   colorTheme1: '#27496d',
 };

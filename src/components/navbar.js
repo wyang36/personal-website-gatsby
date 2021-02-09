@@ -35,7 +35,12 @@ const Navbar = ({ theme, location, onSetMobileMenu }) => {
   }, [isMobileMenuOpen]);
 
   return (
-    <header style={styles.topbar}>
+    <header
+      style={{
+        ...styles.topbar,
+        backgroundImage: `linear-gradient(to right, ${theme.colorTheme0}, ${theme.colorTheme1})`,
+      }}
+    >
       <div
         style={styles.topbarLeft}
         onClick={() => setIsMobileMenuOpen((prevState) => !prevState)}
