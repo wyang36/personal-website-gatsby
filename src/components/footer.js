@@ -15,7 +15,7 @@ const footer = () => {
   return (
     <div style={style}>
       <p>
-        <FontAwesomeIcon icon={faCopyright} />
+        <FontAwesomeIcon icon={faCopyright} size="sm" />
         &nbsp; Kira Yang {year}
       </p>
     </div>

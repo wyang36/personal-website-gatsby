@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Layout from '../components/layout';
-// import Projects from '../components/projects';
+import Projects from '../components/projects';
 
 // styles
 const pageStyles = {
@@ -8,14 +8,40 @@ const pageStyles = {
 };
 
 // markup
-const ProjectsPage = ({ location }) => {
+const ProjectsPage = ({ location, data }) => {
   return (
     <main style={pageStyles}>
       <Layout location={location}>
-        <div />
+        <Projects data={data?.allContentfulProject.edges} />
       </Layout>
     </main>
   );
 };
 
 export default ProjectsPage;
+
+export const query = graphql`
+  query ProjectQuery {
+    allContentfulProject {
+      edges {
+        node {
+          title
+          description {
+            raw
+          }
+          image {
+            title
+            description
+            file {
+              url
+            }
+          }
+          technologies
+          demoLink
+          codeLink
+          status
+        }
+      }
+    }
+  }
+`;
