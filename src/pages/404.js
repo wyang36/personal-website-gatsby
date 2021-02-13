@@ -9,7 +9,9 @@ const pageStyles = {
 const Error404Page = ({ location }) => {
   return (
     <main style={pageStyles}>
-      <Layout location={location}></Layout>
+      <Layout location={location}>
+        <div />
+      </Layout>
     </main>
   );
 };

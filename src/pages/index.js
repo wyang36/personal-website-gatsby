@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Layout from '../components/layout';
-import Intro from '../components/Intro';
+import Intro from '../components/intro';
 
 // styles
 const pageStyles = {
