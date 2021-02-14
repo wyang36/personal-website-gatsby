@@ -1,29 +1,27 @@
 import * as React from 'react';
 import Layout from '../components/layout';
-import Projects from '../components/projects';
+import Blog from '../components/blog';
 
 // markup
-const ProjectsPage = ({ location, data }) => {
+const BlogPage = ({ location, data }) => {
   return (
     <main>
       <Layout location={location}>
-        <Projects data={data?.allContentfulProject.edges} />
+        <Blog data={data?.allContentfulBlogPost.edges} />
       </Layout>
     </main>
   );
 };
 
-export default ProjectsPage;
+export default BlogPage;
 
 export const query = graphql`
-  query ProjectQuery {
-    allContentfulProject {
+  query BlogQuery {
+    allContentfulBlogPost {
       edges {
         node {
           title
-          description {
-            raw
-          }
+          created
           image {
             title
             description
@@ -31,10 +29,9 @@ export const query = graphql`
               url
             }
           }
-          technologies
-          demoLink
-          codeLink
-          status
+          content {
+            raw
+          }
         }
       }
     }

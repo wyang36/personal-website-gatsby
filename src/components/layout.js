@@ -5,6 +5,7 @@ import * as themes from '../styles';
 import { getSeasonByMonth } from '../utils/datetime';
 import Navbar from './navbar';
 import Footer from './footer';
+import './layout.css';
 
 export default function Layout({ children, location }) {
   const [theme, setTheme] = useState(themes[getSeasonByMonth()]);

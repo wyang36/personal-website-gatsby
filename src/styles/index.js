@@ -1,3 +1,6 @@
 import winter from './winter';
+import summer from './summer';
+import spring from './spring';
+import fall from './fall';
 
-export { winter };
+export { spring, summer, fall, winter };

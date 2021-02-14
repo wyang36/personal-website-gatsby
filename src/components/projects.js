@@ -1,28 +1,6 @@
 import React from 'react';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { renderRichText } from 'gatsby-source-contentful/rich-text';
-
-const Bold = ({ children }) => <span style={{ fontSize: 'bold' }}>{children}</span>;
-const Text = ({ children }) => <p style={{ textAlign: 'left' }}>{children}</p>;
-
-const options = {
-  renderMark: {
-    [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
-  },
-  renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
-    [BLOCKS.EMBEDDED_ASSET]: (node) => {
-      return (
-        <>
-          <h2>Embedded Asset</h2>
-          <pre>
-            <code>{JSON.stringify(node, null, 2)}</code>
-          </pre>
-        </>
-      );
-    },
-  },
-};
+import { richTextOptions } from '../utils/data';
 
 const styles = {
   projectContainer: {
@@ -55,6 +33,7 @@ const styles = {
     lineHeight: '20px',
     maxWidth: '60vw',
     width: '50%',
+    minWidth: '260px',
   },
   links: {
     margin: '10px 0px',
@@ -85,13 +64,16 @@ const Project = ({ data, theme }) => {
   const {
     node: { title, description, codeLink, demoLink, status, technologies, image },
   } = data;
-  console.log(data);
   return (
     <div style={{ ...styles.projectCard, borderColor: theme.colorContent0 }}>
       <h2 style={{ color: theme.colorContent1 }}>{title}</h2>
       <div style={styles.status}>
         Status:&nbsp;
-        <span style={{ color: status === 'Completed' ? '#5C9210' : '#e46a6b' }}>{status}</span>
+        <span
+          style={{ color: status === 'Completed' ? theme.colorCompleted : theme.colorInProgress }}
+        >
+          {status}
+        </span>
       </div>
       <div style={styles.lowerContainer}>
         <img src={image.file.url} style={styles.image} />
@@ -112,7 +94,7 @@ const Project = ({ data, theme }) => {
               Code
             </a>
           </div>
-          <div>{renderRichText(description, options)}</div>
+          <div>{renderRichText(description, richTextOptions)}</div>
           <div style={styles.technologies}>
             {technologies.map((technology, index) => (
               <div
