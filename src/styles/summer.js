@@ -1,3 +1,5 @@
+import { faUmbrellaBeach } from '@fortawesome/free-solid-svg-icons';
+
 export default {
   colorBrand0: '#206a5d',
   colorBrand1: '#81b214',
@@ -10,4 +12,7 @@ export default {
   colorTheme1: '#81b214',
   colorCompleted: '#bfdcae',
   colorInProgress: '#f5b461',
+  name: 'Summer',
+  icon: faUmbrellaBeach,
+  next: 'fall',
 };

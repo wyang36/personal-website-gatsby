@@ -13,6 +13,7 @@ const styles = {
     position: 'fixed',
     display: 'flex',
     justifyContent: 'space-between',
+    zIndex: 1,
   },
   topbarLeft: {
     display: 'flex',

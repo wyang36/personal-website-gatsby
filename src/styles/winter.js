@@ -1,3 +1,5 @@
+import { faSnowflake } from '@fortawesome/free-solid-svg-icons';
+
 export default {
   colorBrand0: '#142850',
   colorBrand1: '#27496d',
@@ -10,4 +12,7 @@ export default {
   colorTheme1: '#27496d',
   colorCompleted: '#5C9210',
   colorInProgress: '#e46a6b',
+  name: 'Winter',
+  icon: faSnowflake,
+  next: 'spring',
 };

@@ -1,3 +1,5 @@
+import { faSeedling } from '@fortawesome/free-solid-svg-icons';
+
 export default {
   colorBrand0: '#99b898',
   colorBrand1: '#feceab',
@@ -10,4 +12,7 @@ export default {
   colorTheme1: '#99b898',
   colorCompleted: '#335d2d',
   colorInProgress: '#e84a5f',
+  name: 'Spring',
+  icon: faSeedling,
+  next: 'summer',
 };
