@@ -10,7 +10,6 @@ const styles = {
     width: '200px',
     height: '200px',
     margin: '20px',
-    backgroundImage: 'url(../../my-photo.jpg)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
@@ -22,9 +21,9 @@ const styles = {
   },
 };
 
-const aboutSummary = () => (
+const aboutSummary = ({ image }) => (
   <div style={styles.container}>
-    <div style={styles.photo}></div>
+    <div style={{ ...styles.photo, backgroundImage: `url(${image.file.url})` }}></div>
     <div style={styles.paragraphDiv}>
       <p>
         I graduated from Georgia Tech in Dec 2013 with a BS in Electrical Engineering. However,

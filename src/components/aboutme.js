@@ -10,10 +10,10 @@ const pageStyles = {
   alignItems: 'center',
 };
 // markup
-const AboutMe = ({ theme }) => {
+const AboutMe = ({ theme, image }) => {
   return (
     <div style={pageStyles}>
-      <Summary />
+      <Summary image={image} />
       <Skills theme={theme} />
       <Experiences theme={theme} />
     </div>
