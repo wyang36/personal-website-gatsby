@@ -38,7 +38,6 @@ export const MENUS = [
 
 const Bold = ({ children }) => <span style={{ fontSize: 'bold' }}>{children}</span>;
 const Text = ({ children }) => <p style={{ textAlign: 'left' }}>{children}</p>;
-const Link = ({ children }) => <p style={{ textAlign: 'left' }}>{children}</p>;
 
 export const richTextOptions = {
   renderMark: {

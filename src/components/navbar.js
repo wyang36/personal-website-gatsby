@@ -33,7 +33,7 @@ const Navbar = ({ theme, location, onSetMobileMenu }) => {
 
   useEffect(() => {
     onSetMobileMenu(isMobileMenuOpen);
-  }, [isMobileMenuOpen]);
+  }, [isMobileMenuOpen, onSetMobileMenu]);
 
   return (
     <header

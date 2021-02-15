@@ -76,13 +76,14 @@ const Project = ({ data, theme }) => {
         </span>
       </div>
       <div style={styles.lowerContainer}>
-        <img src={image.file.url} style={styles.image} />
+        <img src={image.file.url} style={styles.image} alt={image.description} />
         <div style={styles.paragraphContainer}>
           <div style={styles.links}>
             <a
               href={demoLink}
               style={{ ...styles.link, color: theme.colorContent1 }}
               target="_blank"
+              rel="noreferrer"
             >
               Demo
             </a>
@@ -90,6 +91,7 @@ const Project = ({ data, theme }) => {
               href={codeLink}
               style={{ ...styles.link, color: theme.colorContent1 }}
               target="_blank"
+              rel="noreferrer"
             >
               Code
             </a>

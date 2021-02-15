@@ -20,7 +20,7 @@ const NavbarLeft = ({ theme, location }) => {
       <div
         style={{
           ...styles.leftMenu,
-          backgroundImage: `linear-gradient(to bottom right, ${theme.colorTheme0}, ${theme.colorTheme1})`,
+          backgroundImage: `linear-gradient(to right, ${theme.colorTheme0}, ${theme.colorTheme1})`,
         }}
       >
         {MENUS.map((item) => (

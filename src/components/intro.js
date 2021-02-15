@@ -9,7 +9,6 @@ const styles = {
     overflow: 'auto',
     fontWeight: 'bold',
     fontSize: '1.2rem',
-    height: '100%',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',

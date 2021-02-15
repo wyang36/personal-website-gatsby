@@ -39,7 +39,7 @@ export default function Layout({ children, location }) {
   const styles = {
     width: '100vw',
     minHeight: '100vh',
-    backgroundImage: `linear-gradient(to bottom right, ${colorTheme0}, ${colorTheme1})`,
+    backgroundImage: `linear-gradient(to right, ${colorTheme0}, ${colorTheme1})`,
     color: colorContent0,
   };
 

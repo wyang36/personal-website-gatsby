@@ -41,7 +41,7 @@ const BlogPost = ({ data, theme }) => {
     <div style={{ ...styles.blogCard, borderColor: theme.colorContent0 }}>
       <h2 style={{ color: theme.colorContent1 }}>{title}</h2>
       <div style={styles.lowerContainer}>
-        <img src={image.file.url} style={styles.image} />
+        <img src={image.file.url} style={styles.image} alt={image.description} />
         <div style={styles.paragraphContainer}>
           <div>{renderRichText(content, richTextOptions)}</div>
         </div>
