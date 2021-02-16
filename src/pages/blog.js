@@ -17,7 +17,7 @@ export default BlogPage;
 
 export const query = graphql`
   query BlogQuery {
-    allContentfulBlogPost {
+    allContentfulBlogPost(sort: { fields: created, order: DESC }) {
       edges {
         node {
           title

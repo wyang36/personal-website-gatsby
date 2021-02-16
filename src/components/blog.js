@@ -35,11 +35,12 @@ const styles = {
 
 const BlogPost = ({ data, theme }) => {
   const {
-    node: { title, content, image },
+    node: { title, content, image, created },
   } = data;
   return (
     <div style={{ ...styles.blogCard, borderColor: theme.colorContent0 }}>
       <h2 style={{ color: theme.colorContent1 }}>{title}</h2>
+      <p style={{ color: theme.colorContent2 }}>{new Date(created).toDateString()}</p>
       <div style={styles.lowerContainer}>
         <img src={image.file.url} style={styles.image} alt={image.description} />
         <div style={styles.paragraphContainer}>
