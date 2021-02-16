@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'gatsby';
-import HeadShake from 'react-reveal/HeadShake';
+import Pulse from 'react-reveal/Pulse';
 
 const styles = {
   item: {
@@ -22,7 +22,7 @@ const styles = {
 const NavbarItem = ({ label, link, icon, theme, active }) => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <HeadShake disabled={!isHovered} forever>
+    <Pulse when={isHovered} forever>
       <div
         style={{ ...styles.item, borderBottomColor: active ? theme.colorBrand3 : 'transparent' }}
         onMouseEnter={() => setIsHovered(true)}
@@ -39,7 +39,7 @@ const NavbarItem = ({ label, link, icon, theme, active }) => {
           {label}
         </Link>
       </div>
-    </HeadShake>
+    </Pulse>
   );
 };
 
