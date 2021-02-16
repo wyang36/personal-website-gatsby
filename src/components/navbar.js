@@ -36,6 +36,7 @@ const styles = {
     width: '120px',
     justifyContent: 'center',
     marginTop: '4px',
+    marginBottom: '4px',
   },
 };
 
@@ -68,13 +69,13 @@ const Navbar = ({ theme, handleThemeSwitch, location, onSetMobileMenu }) => {
         style={styles.topbarLeft}
         onClick={() => setIsMobileMenuOpen((prevState) => !prevState)}
       >
-        {breakpoints.s ? (
+        {breakpoints.sm ? (
           <FontAwesomeIcon icon={faBars} size="lg" />
         ) : (
           <FontAwesomeIcon icon={faFeatherAlt} size="lg" />
         )}
       </div>
-      {breakpoints.s || breakpoints.s === undefined ? (
+      {breakpoints.sm || breakpoints.sm === undefined ? (
         isMobileMenuOpen ? (
           <LeftMenu theme={theme} location={location} />
         ) : (
