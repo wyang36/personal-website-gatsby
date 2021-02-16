@@ -13,7 +13,6 @@ const styles = {
     position: 'fixed',
     display: 'flex',
     justifyContent: 'space-between',
-    zIndex: 1,
   },
   topbarLeft: {
     display: 'flex',
@@ -25,9 +24,32 @@ const styles = {
     alignItems: 'center',
     paddingRight: 16,
   },
+  themeSwitcher: {
+    padding: '10px 15px',
+    border: '2px solid',
+    borderRadius: '3px',
+    display: 'flex',
+    alignItems: 'center',
+    cursor: 'pointer',
+    fontSize: '10pt',
+    marginRight: '15px',
+    width: '120px',
+    justifyContent: 'center',
+    marginTop: '4px',
+  },
 };
 
-const Navbar = ({ theme, location, onSetMobileMenu }) => {
+const ThemeSwitcher = ({ theme, onChange }) => {
+  return (
+    <div style={{ ...styles.themeSwitcher, color: theme.colorContent1 }} onClick={onChange}>
+      Theme:&nbsp;
+      <FontAwesomeIcon icon={theme.icon} size="sm" />
+      &nbsp;{theme.name}
+    </div>
+  );
+};
+
+const Navbar = ({ theme, handleThemeSwitch, location, onSetMobileMenu }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const breakpoints = useBreakpoint();
 
@@ -55,15 +77,18 @@ const Navbar = ({ theme, location, onSetMobileMenu }) => {
       {breakpoints.s || breakpoints.s === undefined ? (
         isMobileMenuOpen ? (
           <LeftMenu theme={theme} location={location} />
-        ) : null
+        ) : (
+          <ThemeSwitcher theme={theme} onChange={handleThemeSwitch} />
+        )
       ) : (
         <div style={styles.topbarRight}>
+          <ThemeSwitcher theme={theme} onChange={handleThemeSwitch} />
           {MENUS.map((item) => (
             <Item
               key={item.link}
               theme={theme}
               {...item}
-              active={location.pathname === item.link}
+              active={location.pathname === item.link || location.pathname === `${item.link}/`}
             />
           ))}
         </div>
