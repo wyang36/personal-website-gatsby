@@ -37,6 +37,7 @@ export default function Layout({ children, location }) {
   return (
     <themeContext.Consumer>
       {(context) => {
+        if (!context) return null;
         const { colorTheme0, colorTheme1, colorContent0 } = context.theme;
         const styles = {
           width: '100vw',
