@@ -89,7 +89,7 @@ const ContactForm = ({ theme, resume }) => {
           <FontAwesomeIcon icon={faInstagram} size="lg" />
         </a>
       </div>
-      <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+      <form method="post" netlify-honeypot="bot-field" netlify="true" name="contact">
         <input type="hidden" name="bot-field" />
         <input type="hidden" name="form-name" value="contact" />
         <label style={{ ...styles.field, color: theme.colorContent2 }}>
