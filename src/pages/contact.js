@@ -16,6 +16,7 @@ const ContactPage = ({ location, data }) => {
         netlify-honeypot="bot-field"
         data-netlify="true"
         name="contact"
+        action="/success"
         style={{ display: 'none' }}
       >
         <input type="hidden" name="bot-field" />
