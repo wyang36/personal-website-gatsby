@@ -50,7 +50,6 @@ const styles = {
 
 const ContactForm = ({ theme, resume }) => {
   const [formState, setFormState] = useState({});
-  const formRef = useRef();
 
   const handleUpdate = (e) => {
     setFormState({ ...formState, [e.target.name]: e.target.value });
@@ -62,13 +61,12 @@ const ContactForm = ({ theme, resume }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    const form = formRef.current;
 
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': form.getAttribute('name'),
+        'form-name': e.target.getAttribute('name'),
         ...formState,
       }),
     })
@@ -76,7 +74,7 @@ const ContactForm = ({ theme, resume }) => {
         console.log('====================================');
         console.log(`${JSON.stringify(response, null, 2)}`);
         console.log('====================================');
-        navigate(form.getAttribute('action'));
+        navigate(e.target.getAttribute('action'));
       })
       .catch((error) => {
         console.log('====================================');
@@ -128,9 +126,8 @@ const ContactForm = ({ theme, resume }) => {
       <form
         method="post"
         netlify-honeypot="bot-field"
-        netlify="true"
+        data-netlify="true"
         name="contact"
-        ref={formRef}
         action="/success"
         onSubmit={handleSubmit}
       >
