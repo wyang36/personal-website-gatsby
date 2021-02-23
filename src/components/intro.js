@@ -12,7 +12,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    height: '100vh',
+    height: 'calc(100vh - 130px)',
   },
   h1: {
     fontSize: '2rem',
