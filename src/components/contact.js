@@ -10,6 +10,7 @@ const styles = {
     margin: 'auto',
     maxWidth: '600px',
     width: 'calc(100% - 40px)',
+    minHeight: 'calc(100vh - 230px)',
   },
   field: {
     display: 'flex',
@@ -92,7 +93,7 @@ const ContactForm = ({ theme, resume }) => {
           href={resume.file.url}
           target="_blank"
           rel="noopener noreferrer"
-          title="Github"
+          title="Resume"
           style={styles.link}
         >
           <FontAwesomeIcon icon={faFilePdf} size="lg" />
@@ -110,7 +111,7 @@ const ContactForm = ({ theme, resume }) => {
           href="https://www.linkedin.com/in/kira-yang-41298220"
           target="_blank"
           rel="noopener noreferrer"
-          title="Github"
+          title="Linkedin"
           style={styles.link}
         >
           <FontAwesomeIcon icon={faLinkedin} size="lg" />
@@ -119,7 +120,7 @@ const ContactForm = ({ theme, resume }) => {
           href="https://www.instagram.com/kirawyang/"
           target="_blank"
           rel="noopener noreferrer"
-          title="Github"
+          title="Instagram"
           style={styles.link}
         >
           <FontAwesomeIcon icon={faInstagram} size="lg" />
