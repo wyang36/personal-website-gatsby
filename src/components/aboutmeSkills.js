@@ -3,21 +3,18 @@ import SkillCategory from './aboutmeSkillCategory';
 
 const skillsData = [
   {
-    category: 'Programming/Markup Languages',
-    skills: ['Javascript (ES6)/JSX', 'HTML', 'CSS/Sass', 'C#', 'SQL', 'C++'],
+    category: 'Machine Learning',
+    skills: ['Python', 'Numpy', 'Pytorch', 'scikit-learn', 'pandas', 'OpenCV', 'OpenAI/gym'],
   },
   {
-    category: 'Frameworks/Libraries',
+    category: 'Web Development',
     skills: [
+      'Javascript/HTML/CSS',
       'ReactJS',
       'GraphQL',
       'React Native',
-      'VueJS',
-      'Angular',
       'NodeJS',
-      'jQuery',
-      'D3',
-      '.NET',
+      'SQL'
     ],
   },
   {
@@ -25,7 +22,6 @@ const skillsData = [
     skills: [
       'Git/Github',
       'Subversion',
-      'MongoDB',
       'MS Visual Studio',
       'Visual Studio Code',
       'Adobe Photoshop',
@@ -33,7 +29,14 @@ const skillsData = [
   },
   {
     category: 'Other',
-    skills: ['Fluent in Mandarin', 'Belay certified', 'Lead certified'],
+    skills: [
+      'VueJS',
+    'Angular',
+    'NodeJS',
+    'jQuery',
+    'MongoDB',
+    'D3',
+    '.NET', 'Fluent in Mandarin'],
   },
 ];
 

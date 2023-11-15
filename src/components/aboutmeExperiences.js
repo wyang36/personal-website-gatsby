@@ -5,10 +5,11 @@ import Experience from './aboutmeExperience';
 const experienceData = [
   {
     employer: 'Knock.com',
-    role: 'Front End Engineer',
-    time: 'July 2018 - Current',
-    description: `This is my second web developer job and my first to use React/Node and other open source technology. 
-        I'm in the team responsible for the public facing website and the internal application. `,
+    role: 'Lead Frontend Engineer',
+    time: 'July 2018 - Dec 2021',
+    description: `This is my second web developer job and 
+        I was in the team responsible for the public facing website and the internal application. I had exposure to various modern web development tools and frameworks like 
+        React, GraphQL, React Native, and NextJS. As a lead engineer, I also participated in the hiring of several frontend, mobile, and test engineers.`,
   },
   {
     employer: 'ProfitSword LLC',
@@ -24,8 +25,7 @@ const experienceData = [
     role: 'Tools Software Co-op',
     time: 'Jan - May 2013',
     description: `This is my last co-op term during my time at Georgia Tech. I assisted in the programming of the GUIs used for testing. My biggest project was to design and
-        program buttons in the GUI to mimic the ones on a car radio, so the testers can control the radio from their computers.
-        I learned a lot of Windows Forms and had a lot of fun!`,
+        program buttons in the GUI to mimic the ones on a car radio, so the testers can control the radio from their computers.`,
   },
   {
     employer: 'Panasonic Automotive Systems of America',

@@ -39,9 +39,8 @@ const aboutSummary = ({ image }) => (
         acquired knowledge, for learning purposes and for fun!
       </p>
       <p>
-        In 2015 I went to a beginner rock climbing class as my birthday present and have loved it
-        since! I mostly climb indoors and venture outdoors occasionally. I currently climb around
-        5.11s and boulder V4s.
+        In Jan 2022 I returned to school to pursue a master's degree in computer science with specialization in machine learning.
+        In the era of artificial intelligence, I am driven to remain at the forefront of innovation, and excited about witnessing the endless possibilities that AI holds for our future. I'm projected to graduate in December 2023 with a 4.0 GPA.
       </p>
     </div>
   </div>

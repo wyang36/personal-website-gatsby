@@ -31,8 +31,8 @@ const Intro = ({ theme, isMobileMenuOpen }) => {
             Hi! I'm <span style={{ color: theme.colorContent1 }}>Kira</span>.
           </h1>
           <h2 style={styles.h2}>
-            I'm a full-stack <span style={{ color: theme.colorContent2 }}>software engineer</span>{' '}
-            and amateur rock climber based in Los Angeles CA.
+            I'm an aspiring <span style={{ color: theme.colorContent2 }}>machine learning engineer</span>{' '}
+            with extensive experience in web development.
           </h2>
         </div>
       </Fade>
