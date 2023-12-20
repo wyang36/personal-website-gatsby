@@ -13,7 +13,7 @@ const myCustomQueries = {
 
 module.exports = {
   siteMetadata: {
-    title: `Kira Yang - Web Developer`,
+    title: `Kira Yang - Software Engineer,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
