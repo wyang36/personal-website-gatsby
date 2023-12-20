@@ -24,7 +24,7 @@ export default function Layout({ children, location }) {
           <div style={styles}>
             <Helmet>
               <link rel="icon" href={favicon} />
-              <title>Kira Yang - Web Developer</title>
+              <title>Kira Yang - Software Engineer</title>
             </Helmet>
             <style jsx="true" global="true">{`
               body {
